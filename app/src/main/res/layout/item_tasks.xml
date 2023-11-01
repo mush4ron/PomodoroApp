@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/primary_light">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="345dp"
+        android:layout_height="80dp"
+        android:background="@drawable/background_rectangle"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTasksName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/rubik_medium"
+            android:lines="1"
+            android:maxEms="11"
+            android:text="UI Design"
+            android:textColor="@color/primary_dark"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTasksWorkTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/background_rectangle"
+            android:backgroundTint="@color/pomodoro_0"
+            android:fontFamily="@font/rubik"
+            android:paddingStart="6dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="2dp"
+            android:text="25:00"
+            android:textColor="@color/pomodoro_3"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTasksCompleteTomatoes"
+            app:layout_constraintStart_toEndOf="@+id/ivTasksTomato"
+            app:layout_constraintTop_toTopOf="@+id/tvTasksCompleteTomatoes" />
+
+
+        <TextView
+            android:id="@+id/tvTasksRelaxTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/background_rectangle"
+            android:backgroundTint="@color/relax_0"
+            android:fontFamily="@font/rubik"
+            android:paddingStart="6dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="2dp"
+            android:text="7:00"
+            android:textColor="@color/relax_1"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTasksWorkTime"
+            app:layout_constraintStart_toEndOf="@+id/tvTasksWorkTime"
+            app:layout_constraintTop_toTopOf="@+id/tvTasksWorkTime" />
+
+
+        <Button
+            android:id="@+id/btnOpenTask"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/ic_dark_play"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTasksCompleteTomatoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/rubik"
+            android:text="1 of 12"
+            android:textColor="@color/pomodoro_4"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvTasksName" />
+
+        <ImageView
+            android:id="@+id/ivTasksTomato"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/im_tomato"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTasksCompleteTomatoes"
+            app:layout_constraintStart_toEndOf="@+id/tvTasksCompleteTomatoes"
+            app:layout_constraintTop_toTopOf="@+id/tvTasksCompleteTomatoes" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

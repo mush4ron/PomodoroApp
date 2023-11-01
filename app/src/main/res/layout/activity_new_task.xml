@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewTaskActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clNewTaskMenu"
+        android:layout_width="0dp"
+        android:layout_height="360dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/background_rectangle"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBackToTasks"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/tvNewTaskTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Create New Task"
+            android:textAppearance="@style/taHeadline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etTaskName"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="64dp"
+            android:background="@drawable/background_borders"
+            android:ems="10"
+            android:hint="Enter task name"
+            android:inputType="text"
+            android:paddingStart="8dp"
+            android:textAppearance="@style/taBase1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNewTaskTitle" />
+
+        <TextView
+            android:id="@+id/tvWorkTimeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Work Time"
+            android:textAppearance="@style/taHeadline3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etTaskName" />
+
+        <TextView
+            android:id="@+id/tvWorkTimeValue"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/background_borders"
+            android:gravity="center"
+            android:text="25 min"
+            android:textAppearance="@style/taBase1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWorkTimeTitle" />
+
+        <Button
+            android:id="@+id/btnWorkTimePlus"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/ic_black_plus"
+            android:backgroundTint="@color/primary_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/tvWorkTimeValue"
+            app:layout_constraintStart_toEndOf="@+id/tvWorkTimeValue"
+            app:layout_constraintTop_toTopOf="@+id/tvWorkTimeValue" />
+
+        <Button
+            android:id="@+id/btnWorkTimeMinus"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ic_minus"
+            android:backgroundTint="@color/primary_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/tvWorkTimeValue"
+            app:layout_constraintEnd_toStartOf="@+id/tvWorkTimeValue"
+            app:layout_constraintTop_toBottomOf="@+id/tvWorkTimeTitle" />
+
+        <TextView
+            android:id="@+id/tvRelaxTimeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Relax Time"
+            android:textAppearance="@style/taHeadline3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvWorkTimeValue" />
+
+        <TextView
+            android:id="@+id/tvRelaxTimeValue"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/background_borders"
+            android:gravity="center"
+            android:text="10 min"
+            android:textAppearance="@style/taBase1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRelaxTimeTitle" />
+
+        <Button
+            android:id="@+id/btnRelaxTimePlus"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/ic_black_plus"
+            android:backgroundTint="@color/primary_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRelaxTimeValue"
+            app:layout_constraintStart_toEndOf="@+id/tvRelaxTimeValue"
+            app:layout_constraintTop_toTopOf="@+id/tvRelaxTimeValue" />
+
+        <Button
+            android:id="@+id/btnRelaxTimeMinus"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ic_minus"
+            android:backgroundTint="@color/primary_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRelaxTimeValue"
+            app:layout_constraintEnd_toStartOf="@+id/tvRelaxTimeValue"
+            app:layout_constraintTop_toBottomOf="@+id/tvRelaxTimeTitle" />
+
+        <TextView
+            android:id="@+id/tvTomatoesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Tomatoes per day"
+            android:textAppearance="@style/taHeadline3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRelaxTimeValue" />
+
+        <TextView
+            android:id="@+id/tvTomatoesValue"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/background_borders"
+            android:gravity="center"
+            android:text="8"
+            android:textAppearance="@style/taBase1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTomatoesTitle" />
+
+        <Button
+            android:id="@+id/btnTomatoesPlus"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/ic_black_plus"
+            android:backgroundTint="@color/primary_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTomatoesValue"
+            app:layout_constraintStart_toEndOf="@+id/tvTomatoesValue"
+            app:layout_constraintTop_toTopOf="@+id/tvTomatoesValue" />
+
+        <Button
+            android:id="@+id/btnTomatoesMinus"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ic_minus"
+            android:backgroundTint="@color/primary_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTomatoesValue"
+            app:layout_constraintEnd_toStartOf="@+id/tvTomatoesValue"
+            app:layout_constraintTop_toBottomOf="@+id/tvTomatoesTitle" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnBackToTasks"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_dark_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSaveNewTask"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/light_btn_background"
+        android:text="Save"
+        android:textColor="@color/primary_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clNewTaskMenu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

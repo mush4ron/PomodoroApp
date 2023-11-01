@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_light"
+    tools:context=".TimerActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBarActTimer"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:indeterminateOnly="false"
+        android:progress="50"
+        android:progressDrawable="@drawable/progress_bar_work"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+
+    <TextView
+        android:id="@+id/tvCurrentTaskTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="32:10"
+        android:textColor="@color/primary_dark"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBarActTimer"
+        app:layout_constraintEnd_toEndOf="@+id/progressBarActTimer"
+        app:layout_constraintStart_toStartOf="@+id/progressBarActTimer"
+        app:layout_constraintTop_toTopOf="@+id/progressBarActTimer" />
+
+    <Button
+        android:id="@+id/btnSkipTimerAct"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_light_skip"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlayTimerAct"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarActTimer" />
+
+
+    <Button
+        android:id="@+id/btnPlayTimerAct"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_light_play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSkipTimerAct"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarActTimer" />
+
+
+    <TextView
+        android:id="@+id/tvCurrentTaskNameActTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:ems="9"
+        android:fontFamily="@font/rubik_medium"
+        android:lines="1"
+        android:text="UI Design And Other Things"
+        android:textAlignment="center"
+        android:textColor="@color/primary_dark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBackActTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnBackActTimer" />
+
+    <Button
+        android:id="@+id/btnBackActTimer"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_dark_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnDeleteActTimer"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_dark_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTimerNameActTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:paddingStart="6dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="6dp"
+        android:paddingBottom="2dp"
+        android:text="Work Time"
+        android:textColor="@color/primary_dark"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBarActTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/rubik"
+        android:text="Skip"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnSkipTimerAct"
+        app:layout_constraintStart_toStartOf="@+id/btnSkipTimerAct"
+        app:layout_constraintTop_toBottomOf="@+id/btnSkipTimerAct" />
+
+    <TextView
+        android:id="@+id/tvPlayOrPauseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/rubik"
+        android:text="Play"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnPlayTimerAct"
+        app:layout_constraintStart_toStartOf="@+id/btnPlayTimerAct"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlayTimerAct" />
+
+    <TextView
+        android:id="@+id/tvTomatoesInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/rubik"
+        android:text="0/12"
+        android:textColor="@color/primary_dark"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvCurrentTaskTimer"
+        app:layout_constraintEnd_toEndOf="@+id/tvCurrentTaskTimer"
+        app:layout_constraintStart_toStartOf="@+id/tvCurrentTaskTimer" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTomatoesInfo"
+        app:layout_constraintEnd_toEndOf="@+id/tvTomatoesInfo"
+        app:layout_constraintStart_toStartOf="@+id/tvTomatoesInfo"
+        app:srcCompat="@drawable/im_tomato" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

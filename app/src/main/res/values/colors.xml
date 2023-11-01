@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <color name="background">#18152C</color>
+    
+
+    <color name="primary_dark">#070417</color>
+    <color name="primary_light">#FAFAFF</color>
+
+    <color name="dark_gray">#4F4F4F</color>
+    <color name="normal_gray">#a8a8a8</color>
+    <color name="light_gray">#F2F2F2</color>
+
+    <color name="pomodoro_4">#7e280b</color>
+    <color name="pomodoro_3">#fb5015</color>
+    <color name="pomodoro_2">#ff8152</color>
+    <color name="pomodoro_1">#ffd6c3</color>
+    <color name="pomodoro_0">#FFEFF1</color>
+
+    <color name="relax_1">#4753bd</color>
+    <color name="relax_2">#7d7bce</color>
+    <color name="relax_3">#d5d1ef</color>
+    <color name="relax_0">#ecedf8</color>
+
+    <color name="light_btn_background">#E9E9FF</color>
+    <color name="light_elements_color">#a8a8a8</color>
+
+    <color name="dark_btn_background">#1B143F</color>
+</resources>

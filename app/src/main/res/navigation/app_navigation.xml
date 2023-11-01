@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/taskListFragment">
+
+    <fragment
+        android:id="@+id/taskListFragment"
+        android:name="com.rxs.pomodorotracker.TaskListFragment"
+        android:label="fragment_task_list"
+        tools:layout="@layout/fragment_task_list" />
+    <fragment
+        android:id="@+id/newTaskFragment"
+        android:name="com.rxs.pomodorotracker.NewTaskFragment"
+        android:label="fragment_new_task"
+        tools:layout="@layout/fragment_new_task" />
+    <fragment
+        android:id="@+id/recentTaskFragment"
+        android:name="com.rxs.pomodorotracker.RecentTaskFragment"
+        android:label="fragment_recent_task"
+        tools:layout="@layout/fragment_recent_task" />
+</navigation>
