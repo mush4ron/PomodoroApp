@@ -9,5 +9,7 @@
         <item name="android:windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
+
+        <item name="android:editTextColor">@color/white</item>
     </style>
 </resources>
