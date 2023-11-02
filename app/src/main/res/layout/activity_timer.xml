@@ -157,6 +157,6 @@
         app:layout_constraintBottom_toTopOf="@+id/tvTomatoesInfo"
         app:layout_constraintEnd_toEndOf="@+id/tvTomatoesInfo"
         app:layout_constraintStart_toStartOf="@+id/tvTomatoesInfo"
-        app:srcCompat="@drawable/im_tomato" />
+        app:srcCompat="@drawable/a_ic_tomato" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

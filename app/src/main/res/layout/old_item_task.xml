@@ -101,7 +101,7 @@
             android:layout_height="20dp"
             android:layout_marginStart="2dp"
             android:layout_marginBottom="2dp"
-            android:background="@drawable/im_tomato"
+            android:background="@drawable/a_ic_tomato"
             app:layout_constraintBottom_toBottomOf="@+id/tvTasksCompleteTomatoes"
             app:layout_constraintStart_toEndOf="@+id/tvTasksCompleteTomatoes"
             app:layout_constraintTop_toTopOf="@+id/tvTasksCompleteTomatoes" />
