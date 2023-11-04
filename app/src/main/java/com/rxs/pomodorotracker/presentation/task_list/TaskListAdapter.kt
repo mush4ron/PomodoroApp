@@ -58,5 +58,6 @@ class TaskListAdapter @Inject constructor() :
 
     fun submitData(data: List<Task>) {
         taskList = data
+        notifyDataSetChanged()
     }
 }

@@ -39,7 +39,7 @@ class NewTaskFragment : Fragment() {
                 )
 
                 Navigation.createNavigateOnClickListener(
-                    R.id.action_timerFragment_to_taskListFragment
+                    R.id.action_newTaskFragment_to_taskListFragment
                 ).onClick(it)
             }
         }

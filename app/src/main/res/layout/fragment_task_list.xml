@@ -46,7 +46,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/background_support">
+            android:background="@color/background_support"
+            android:elevation="@dimen/elevation">
 
             <TextView
                 android:id="@+id/tv_fragment_task_list_recent_timer"

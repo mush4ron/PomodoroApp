@@ -19,7 +19,11 @@
         android:id="@+id/newTaskFragment"
         android:name="com.rxs.pomodorotracker.presentation.new_task.NewTaskFragment"
         android:label="fragment_new_task"
-        tools:layout="@layout/fragment_new_task" />
+        tools:layout="@layout/fragment_new_task" >
+        <action
+            android:id="@+id/action_newTaskFragment_to_taskListFragment"
+            app:destination="@id/taskListFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/recentTaskFragment"

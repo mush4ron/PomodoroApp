@@ -94,8 +94,10 @@
 
     <style name="BaseButton" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/a_shape_element</item>
-        <item name="backgroundTint">@color/gray_light</item>
+        <item name="backgroundTint">@color/orange</item>
+        <item name="android:textColor">@color/background</item>
         <item name="fontFamily">@font/rubik_medium</item>
+        <item name="android:elevation">@dimen/elevation</item>
         <item name="android:padding">0dp</item>
     </style>
 

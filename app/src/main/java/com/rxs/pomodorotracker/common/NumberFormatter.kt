@@ -1,6 +1,6 @@
 package com.rxs.pomodorotracker.common
 
-fun Int.fromMinutesToText(): String = "$this: 00"
+fun Int.fromMinutesToText(): String = "$this:00"
 
 fun String.eraseMinutes(): Int = this.replace(" min", "").toInt()
 
