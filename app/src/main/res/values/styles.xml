@@ -69,10 +69,10 @@
 
     <style name="BackgroundText" parent="Caption2">
         <item name="android:background">@drawable/a_shape_element</item>
-        <item name="android:paddingStart">6dp</item>
-        <item name="android:paddingEnd">6dp</item>
-        <item name="android:paddingTop">2dp</item>
-        <item name="android:paddingBottom">2dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
     </style>
 
     <style name="WorkTime" parent="BackgroundText">
@@ -88,6 +88,8 @@
     <style name="Tomato" parent="BackgroundText">
         <item name="android:textColor">@color/red</item>
         <item name="backgroundTint">@color/red_background</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
     </style>
 
     <style name="BaseButton" parent="Widget.AppCompat.Button">
@@ -102,10 +104,15 @@
         <item name="android:backgroundTint">@color/background_support</item>
     </style>
 
-    <style name="BottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+    <style name="BottomNavigationStyle" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
         <item name="android:background">@color/background</item>
-        <item name="itemTextColor">@color/background</item>
+        <item name="itemTextColor">@color/bottom_menu_text</item>
         <item name="itemIconTint">@color/bottom_menu_icon</item>
+    </style>
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/a_shape_edit_text</item>
+        <item name="android:paddingStart">12dp</item>
     </style>
 
 </resources>

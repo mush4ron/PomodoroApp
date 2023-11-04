@@ -8,6 +8,7 @@
     app:cardCornerRadius="@dimen/card_corner_radius">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_item_task"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/background_support">
@@ -18,7 +19,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:ellipsize="end"
             android:maxLines="1"
@@ -53,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="12dp"
             android:layout_weight="1"
             android:text="24:00"
             app:layout_constraintBottom_toBottomOf="parent"

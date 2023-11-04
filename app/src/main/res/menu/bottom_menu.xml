@@ -8,11 +8,11 @@
 
     <item
         android:id="@+id/newTaskFragment"
-        android:icon="@drawable/a_ic_add"
+        android:icon="@drawable/a_ic_add_timer"
         android:title="Добавить" />
 
     <item
         android:id="@+id/recentTaskFragment"
-        android:icon="@drawable/a_ic_add"
+        android:icon="@drawable/a_ic_last"
         android:title="Последний" />
 </menu>

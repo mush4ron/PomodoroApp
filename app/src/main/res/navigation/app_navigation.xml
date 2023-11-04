@@ -7,22 +7,34 @@
 
     <fragment
         android:id="@+id/taskListFragment"
-        android:name="com.rxs.pomodorotracker.TaskListFragment"
+        android:name="com.rxs.pomodorotracker.presentation.task_list.TaskListFragment"
         android:label="fragment_task_list"
-        tools:layout="@layout/fragment_task_list" />
+        tools:layout="@layout/fragment_task_list">
+        <action
+            android:id="@+id/action_taskListFragment_to_timerFragment"
+            app:destination="@id/timerFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/newTaskFragment"
-        android:name="com.rxs.pomodorotracker.NewTaskFragment"
+        android:name="com.rxs.pomodorotracker.presentation.new_task.NewTaskFragment"
         android:label="fragment_new_task"
         tools:layout="@layout/fragment_new_task" />
+
     <fragment
         android:id="@+id/recentTaskFragment"
         android:name="com.rxs.pomodorotracker.RecentTaskFragment"
         android:label="fragment_recent_task"
         tools:layout="@layout/fragment_recent_task" />
+
     <fragment
         android:id="@+id/timerFragment"
         android:name="com.rxs.pomodorotracker.TimerFragment"
         android:label="fragment_timer"
-        tools:layout="@layout/fragment_timer" />
+        tools:layout="@layout/fragment_timer">
+        <action
+            android:id="@+id/action_timerFragment_to_taskListFragment"
+            app:destination="@id/taskListFragment" />
+    </fragment>
+
 </navigation>
