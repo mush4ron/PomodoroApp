@@ -5,7 +5,7 @@
             android:shape="ring"
             android:thicknessRatio="16"
             android:useLevel="false">
-            <solid android:color="@color/light_btn_background" />
+            <solid android:color="@color/progress_bar_background" />
         </shape>
     </item>
     <item>
@@ -18,9 +18,9 @@
                 android:useLevel="true">
                 <gradient
                     android:angle="315"
-                    android:centerColor="@color/relax_2"
-                    android:endColor="@color/relax_3"
-                    android:startColor="@color/relax_1"
+                    android:centerColor="@color/gray_light"
+                    android:endColor="@color/white"
+                    android:startColor="@color/gray"
                     android:type="linear" />
             </shape>
         </rotate>

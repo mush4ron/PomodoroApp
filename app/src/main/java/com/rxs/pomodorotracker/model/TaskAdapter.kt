@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.rxs.pomodorotracker.TimerActivity
-import com.rxs.pomodorotracker.databinding.ItemTasksBinding
+import com.rxs.pomodorotracker.databinding.OldItemTaskBinding
 
 class TaskAdapter(
     private val tasks: List<Task>
@@ -13,7 +13,7 @@ class TaskAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TasksViewHolder {
         val itemBinding =
-            ItemTasksBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            OldItemTaskBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return TasksViewHolder(itemBinding)
     }
 
@@ -26,7 +26,7 @@ class TaskAdapter(
         holder.bind(task)
     }
 
-    inner class TasksViewHolder(private val itemBinding: ItemTasksBinding) :
+    inner class TasksViewHolder(private val itemBinding: OldItemTaskBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
         fun bind(task: Task) = with(itemBinding) {
             tvTasksName.text = task.taskName

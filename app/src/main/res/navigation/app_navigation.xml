@@ -20,4 +20,9 @@
         android:name="com.rxs.pomodorotracker.RecentTaskFragment"
         android:label="fragment_recent_task"
         tools:layout="@layout/fragment_recent_task" />
+    <fragment
+        android:id="@+id/timerFragment"
+        android:name="com.rxs.pomodorotracker.TimerFragment"
+        android:label="fragment_timer"
+        tools:layout="@layout/fragment_timer" />
 </navigation>

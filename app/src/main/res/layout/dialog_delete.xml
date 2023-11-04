@@ -20,7 +20,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_dark_delete"
+            app:srcCompat="@drawable/ic_trash"
             app:tint="@color/pomodoro_3" />
 
         <TextView
