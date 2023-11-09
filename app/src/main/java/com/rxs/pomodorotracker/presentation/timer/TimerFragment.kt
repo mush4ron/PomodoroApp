@@ -60,13 +60,13 @@ class TimerFragment : Fragment() {
 
                 if (it.stopType == ActionType.WORK) {
                     tvFragmentTimerFullTitleName.text = "Работа"
-                    ivFragmentTimerFullTitleIcon.setImageResource(R.drawable.a_shape_work_ring)
+                    ivFragmentTimerFullTitleIcon.setImageResource(R.drawable.shape_work_ring)
                     pbFragmentTimerRing.progressDrawable =
                         ResourcesCompat.getDrawable(resources, R.drawable.progress_bar_work, null)
 
                 } else {
                     tvFragmentTimerFullTitleName.text = "Отдых"
-                    ivFragmentTimerFullTitleIcon.setImageResource(R.drawable.a_shape_relax_ring)
+                    ivFragmentTimerFullTitleIcon.setImageResource(R.drawable.shape_relax_ring)
                     pbFragmentTimerRing.progressDrawable =
                         ResourcesCompat.getDrawable(resources, R.drawable.progress_bar_relax, null)
                 }
@@ -101,6 +101,9 @@ class TimerFragment : Fragment() {
             }
             llFragmentTimerSkip.setOnClickListener {
                 viewModel.nextTomato()
+            }
+            tvFragmentTimerReset.setOnClickListener {
+                viewModel.resetTomatoes()
             }
         }
     }

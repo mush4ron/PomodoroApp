@@ -1,9 +1,10 @@
-package com.rxs.pomodorotracker
+package com.rxs.pomodorotracker.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.rxs.pomodorotracker.R
 import com.rxs.pomodorotracker.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 

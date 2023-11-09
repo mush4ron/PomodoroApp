@@ -1,34 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--Titles-->
-    <style name="taHeadline2">
-        <item name="android:textColor">@color/primary_dark</item>
-        <item name="android:textSize">24sp</item>
-        <item name="android:fontFamily">@font/rubik_medium</item>
-    </style>
-
-    <!--Tasks-->
-    <style name="taHeadline3">
-        <item name="android:textColor">@color/primary_dark</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:fontFamily">@font/rubik_medium</item>
-    </style>
-
-    <style name="taBase1">
-        <item name="android:textColor">@color/primary_dark</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:fontFamily">@font/rubik</item>
-    </style>
-
-    <!--Base texts-->
-    <style name="taBase2">
-        <item name="android:textColor">@color/primary_dark</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:fontFamily">@font/rubik</item>
-    </style>
-
-
-    <!-- Text -->
 
     <style name="BaseText" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@color/white</item>
@@ -68,7 +39,7 @@
     </style>
 
     <style name="BackgroundText" parent="Caption2">
-        <item name="android:background">@drawable/a_shape_element</item>
+        <item name="android:background">@drawable/shape_element</item>
         <item name="android:paddingStart">8dp</item>
         <item name="android:paddingEnd">8dp</item>
         <item name="android:paddingTop">6dp</item>
@@ -85,24 +56,25 @@
         <item name="backgroundTint">@color/gray_background</item>
     </style>
 
-    <style name="Tomato" parent="BackgroundText">
-        <item name="android:textColor">@color/red</item>
-        <item name="backgroundTint">@color/red_background</item>
-        <item name="android:paddingStart">12dp</item>
-        <item name="android:paddingEnd">12dp</item>
-    </style>
-
     <style name="BaseButton" parent="Widget.AppCompat.Button">
-        <item name="android:background">@drawable/a_shape_element</item>
-        <item name="backgroundTint">@color/orange</item>
-        <item name="android:textColor">@color/background</item>
+        <item name="android:background">@drawable/shape_element</item>
+        <item name="android:textColor">@color/orange_background</item>
         <item name="fontFamily">@font/rubik_medium</item>
         <item name="android:elevation">@dimen/elevation</item>
         <item name="android:padding">0dp</item>
     </style>
 
+    <style name="OrangeButton" parent="BaseButton">
+        <item name="backgroundTint">@color/orange</item>
+    </style>
+
+    <style name="BackgroundButton" parent="BaseButton">
+        <item name="android:textColor">@color/red</item>
+        <item name="backgroundTint">@color/background</item>
+    </style>
+
     <style name="OvalButton">
-        <item name="android:background">@drawable/a_shape_orange_grad_oval</item>
+        <item name="android:background">@drawable/shape_orange_grad_oval</item>
         <item name="android:backgroundTint">@color/background_support</item>
     </style>
 
@@ -113,7 +85,7 @@
     </style>
 
     <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
-        <item name="android:background">@drawable/a_shape_edit_text</item>
+        <item name="android:background">@drawable/shape_edit_text</item>
         <item name="android:paddingStart">12dp</item>
     </style>
 

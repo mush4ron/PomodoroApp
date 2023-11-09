@@ -37,10 +37,5 @@
             android:name="currentTask"
             app:argType="com.rxs.pomodorotracker.data.model.Task" />
     </fragment>
-    <fragment
-        android:id="@+id/recentTaskFragment"
-        android:name="com.rxs.pomodorotracker.RecentTaskFragment"
-        android:label="fragment_recent_task"
-        tools:layout="@layout/fragment_recent_task" />
 
 </navigation>

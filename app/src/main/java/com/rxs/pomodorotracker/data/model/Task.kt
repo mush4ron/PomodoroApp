@@ -6,7 +6,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Task(
-    var name: String = "Unnamed",
+    var name: String = "Без названия",
     var workTimeInMinutes: Int = 25,
     var relaxTimeInMinutes: Int = 7,
     var tomatoesComplete: Int = 0,

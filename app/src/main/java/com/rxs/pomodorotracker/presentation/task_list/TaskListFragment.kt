@@ -1,7 +1,6 @@
 package com.rxs.pomodorotracker.presentation.task_list
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -48,11 +47,11 @@ class TaskListFragment : Fragment() {
                         tvFragmentTaskListRecentTitle.text = name
 
                         if (stopType == ActionType.WORK) {
-                            ivFragmentTaskListTypeRing.setImageResource(R.drawable.a_shape_work_ring)
+                            ivFragmentTaskListTypeRing.setImageResource(R.drawable.shape_work_ring)
                             tvFragmentTaskListRecentTypeRelax.visibility = View.GONE
                             tvFragmentTaskListRecentTypeWork.visibility = View.VISIBLE
                         } else {
-                            ivFragmentTaskListTypeRing.setImageResource(R.drawable.a_shape_relax_ring)
+                            ivFragmentTaskListTypeRing.setImageResource(R.drawable.shape_relax_ring)
                             tvFragmentTaskListRecentTypeWork.visibility = View.GONE
                             tvFragmentTaskListRecentTypeRelax.visibility = View.VISIBLE
                         }

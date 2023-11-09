@@ -35,7 +35,7 @@
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginStart="16dp"
-            android:background="@drawable/a_shape_orange_grad_oval"
+            android:background="@drawable/shape_orange_grad_oval"
             android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +45,7 @@
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src="@drawable/a_ic_clock" />
+                android:src="@drawable/im_clock" />
 
         </LinearLayout>
 
@@ -78,7 +78,7 @@
             android:layout_width="15dp"
             android:layout_height="17dp"
             android:layout_marginEnd="16dp"
-            android:src="@drawable/a_ic_play"
+            android:src="@drawable/ic_play"
             app:layout_constraintBottom_toBottomOf="@+id/tv_item_task_relax_time"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tv_item_task_relax_time"
@@ -99,7 +99,7 @@
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginEnd="4dp"
-            android:src="@drawable/a_ic_tomato"
+            android:src="@drawable/im_tomato"
             app:layout_constraintBottom_toBottomOf="@+id/tv_item_task_completed_text"
             app:layout_constraintEnd_toStartOf="@+id/tv_item_task_completed_text"
             app:layout_constraintTop_toTopOf="@+id/tv_item_task_completed_text" />

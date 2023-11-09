@@ -76,16 +76,27 @@ class TimerViewModel @Inject constructor(
         }
     }
 
+    fun resetTomatoes() {
+        _currentTask.value!!.apply {
+            tomatoesComplete = 0
+            stopType = ActionType.WORK
+            passedTimeInSeconds = 0
+        }
+        updateTask()
+        updateCurrentTaskLiveData()
+        refreshProgressBar()
+        setupData()
+        if (isTimerActive) countDownTimer.cancel()
+    }
+
     fun updateTask() {
         viewModelScope.launch {
-            if (lastSavedTask != _currentTask.value!!) {
-                updateTaskUseCase.invoke(
-                    oldTask = lastSavedTask,
-                    updatedTask = _currentTask.value!!,
-                    recentTask = _currentTask.value!!
-                )
-                updateLastSavedTask()
-            }
+            updateTaskUseCase.invoke(
+                oldTask = lastSavedTask,
+                updatedTask = _currentTask.value!!,
+                recentTask = _currentTask.value!!
+            )
+            updateLastSavedTask()
         }
     }
 

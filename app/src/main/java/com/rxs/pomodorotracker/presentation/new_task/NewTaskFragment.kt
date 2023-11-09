@@ -51,7 +51,7 @@ class NewTaskFragment : Fragment() {
         binding.apply {
             btnFragmentNewTaskCreate.setOnClickListener {
                 val name = etFragmentNewTaskName.text.toString()
-                if (name.isNotBlank() && name != "Unnamed?") {
+                if (name.isNotBlank() && name != "Без названия?") {
                     viewModel.createTask(name = etFragmentNewTaskName.text.toString())
 
                     Navigation.createNavigateOnClickListener(
@@ -59,7 +59,7 @@ class NewTaskFragment : Fragment() {
                     ).onClick(it)
                 } else {
                     etFragmentNewTaskName.text =
-                        Editable.Factory.getInstance().newEditable("Unnamed?")
+                        Editable.Factory.getInstance().newEditable("Без названия?")
                 }
             }
 

@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/tv_fragment_tomer_tomato_count"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
@@ -13,7 +12,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="24dp"
-        android:src="@drawable/a_ic_arrow_back"
+        android:src="@drawable/ic_arrow_back"
         app:layout_constraintBottom_toBottomOf="@+id/tv_fragment_timer_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_fragment_timer_title" />
@@ -39,7 +38,8 @@
         android:layout_width="22dp"
         android:layout_height="22dp"
         android:layout_marginEnd="24dp"
-        android:src="@drawable/a_ic_trash"
+        android:src="@drawable/ic_trash"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_fragment_timer_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_fragment_timer_title"
         app:tint="@color/white" />
@@ -58,20 +58,20 @@
             android:id="@+id/iv_fragment_timer_full_title_icon"
             android:layout_width="16dp"
             android:layout_height="16dp"
-            android:src="@drawable/a_shape_work_ring"
+            android:src="@drawable/shape_work_ring"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_fragment_timer_full_title_name"
-            style="@style/Caption2"
+            style="@style/Caption1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:text="UI Design and others design things"
+            android:text="Работа"
             android:textColor="@color/gray_light"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +94,7 @@
             android:id="@+id/iv_fragment_timer_tomato_icon"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/a_ic_tomato"
+            android:src="@drawable/im_tomato"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -124,7 +124,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5">
+        app:layout_constraintVertical_bias="0.4">
 
         <ProgressBar
             android:id="@+id/pb_fragment_timer_ring"
@@ -160,8 +160,9 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginEnd="100dp"
+        android:layout_marginBottom="24dp"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_fragment_timer_reset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cl_fragment_timer_ring">
 
@@ -169,7 +170,7 @@
             android:layout_width="26dp"
             android:layout_height="26dp"
             android:layout_marginStart="5dp"
-            android:src="@drawable/a_ic_skip"
+            android:src="@drawable/ic_skip"
             app:tint="@color/white" />
 
     </LinearLayout>
@@ -180,15 +181,16 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="100dp"
+        android:layout_marginBottom="24dp"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_fragment_timer_reset"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cl_fragment_timer_ring">
 
         <ImageView
             android:layout_width="26dp"
             android:layout_height="26dp"
-            android:src="@drawable/a_ic_pause"
+            android:src="@drawable/ic_pause"
             app:tint="@color/white" />
 
     </LinearLayout>
@@ -199,8 +201,9 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="100dp"
+        android:layout_marginBottom="24dp"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_fragment_timer_reset"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cl_fragment_timer_ring">
 
@@ -208,10 +211,24 @@
             android:layout_width="26dp"
             android:layout_height="26dp"
             android:layout_marginStart="5dp"
-            android:src="@drawable/a_ic_play"
+            android:src="@drawable/ic_play"
             app:tint="@color/white" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_fragment_timer_reset"
+        style="@style/Title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:text="Сбросить помидорки"
+        android:textAllCaps="true"
+        android:textColor="@color/gray_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
