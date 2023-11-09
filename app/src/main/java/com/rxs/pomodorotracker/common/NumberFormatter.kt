@@ -1,7 +1,9 @@
 package com.rxs.pomodorotracker.common
 
-fun Int.fromMinutesToText(): String = "$this:00"
+fun Int.toStringWithZeros(): String = "$this:00"
 
-fun String.eraseMinutes(): Int = this.replace(" min", "").toInt()
+fun Int.toStringWithMin(): String = "$this min"
+
+fun Long.toTimeText(): String = String.format("%02d:%02d", this / 60, this % 60)
 
 fun concatPomodoroText(complete: Int, goal: Int): String = "$complete из $goal"

@@ -6,7 +6,7 @@ import com.rxs.pomodorotracker.domain.repository.DataRepository
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-class CreateTaskUseCase @Inject constructor(
+class DeleteTaskUseCase @Inject constructor(
     private val dataRepository: DataRepository,
     private val dispatcherProvider: DispatcherProvider
 ) {
@@ -14,7 +14,8 @@ class CreateTaskUseCase @Inject constructor(
     suspend fun invoke(task: Task) {
         withContext(dispatcherProvider.io) {
             val sharedPomodoroData = dataRepository.get()
-            sharedPomodoroData.taskList.add(task)
+            sharedPomodoroData.taskList.remove(task)
+            sharedPomodoroData.recentTask = null
             dataRepository.save(data = sharedPomodoroData)
         }
     }

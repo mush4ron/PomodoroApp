@@ -11,7 +11,7 @@ class GetDataUseCase @Inject constructor(
     private val dispatcherProvider: DispatcherProvider
 ) {
 
-    suspend fun getData(): PomodoroData = withContext(dispatcherProvider.io) {
+    suspend fun invoke(): PomodoroData = withContext(dispatcherProvider.io) {
         dataRepository.get()
     }
 }

@@ -2,10 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_fragment_tomer_tomato_count"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".TimerFragment">
+    tools:context=".presentation.timer.TimerFragment">
 
     <ImageView
         android:id="@+id/iv_fragment_timer_back"
@@ -54,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_fragment_timer_title">
 
         <ImageView
-            android:id="@+id/tv_fragment_timer_full_tittle_icon"
+            android:id="@+id/iv_fragment_timer_full_title_icon"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:src="@drawable/a_shape_work_ring"
@@ -63,7 +64,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_fragment_timer_full_tittle_name"
+            android:id="@+id/tv_fragment_timer_full_title_name"
             style="@style/Caption2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -74,10 +75,44 @@
             android:textColor="@color/gray_light"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tv_fragment_timer_full_tittle_icon"
+            app:layout_constraintStart_toEndOf="@+id/iv_fragment_timer_full_title_icon"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.5" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_fragment_timer_tomato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_fragment_timer_full_title">
+
+        <ImageView
+            android:id="@+id/iv_fragment_timer_tomato_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/a_ic_tomato"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/tv_fragment_timer_tomato_count"
+            style="@style/Caption1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="1 из 12"
+            android:textColor="@color/gray_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_fragment_timer_tomato_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -96,7 +131,6 @@
             android:layout_width="220dp"
             android:layout_height="220dp"
             android:indeterminateOnly="false"
-            android:progress="50"
             android:progressDrawable="@drawable/progress_bar_work"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -120,6 +154,44 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <LinearLayout
+        android:id="@+id/ll_fragment_timer_skip"
+        style="@style/OvalButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="100dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_fragment_timer_ring">
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/a_ic_skip"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_fragment_timer_pause"
+        style="@style/OvalButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="100dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_fragment_timer_ring">
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/a_ic_pause"
+            app:tint="@color/white" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_fragment_timer_play"
@@ -137,46 +209,6 @@
             android:layout_height="26dp"
             android:layout_marginStart="5dp"
             android:src="@drawable/a_ic_play"
-            app:tint="@color/white" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_fragment_timer_pause"
-        style="@style/OvalButton"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="100dp"
-        android:gravity="center"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cl_fragment_timer_ring">
-
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:src="@drawable/a_ic_pause"
-            app:tint="@color/white" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_fragment_timer_skip"
-        style="@style/OvalButton"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginEnd="100dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cl_fragment_timer_ring">
-
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:layout_marginStart="5dp"
-            android:src="@drawable/a_ic_skip"
             app:tint="@color/white" />
 
     </LinearLayout>

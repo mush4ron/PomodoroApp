@@ -7,7 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.rxs.pomodorotracker.R
+import com.rxs.pomodorotracker.common.ActionType
+import com.rxs.pomodorotracker.common.toTimeText
 import com.rxs.pomodorotracker.databinding.FragmentTaskListBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -38,6 +42,39 @@ class TaskListFragment : Fragment() {
 
     private fun startObserve() {
         viewModel.pomodoroData.observe(viewLifecycleOwner) {
+            if (it.recentTask != null) {
+                binding.apply {
+                    it.recentTask!!.apply {
+                        tvFragmentTaskListRecentTitle.text = name
+
+                        if (stopType == ActionType.WORK) {
+                            ivFragmentTaskListTypeRing.setImageResource(R.drawable.a_shape_work_ring)
+                            tvFragmentTaskListRecentTypeRelax.visibility = View.GONE
+                            tvFragmentTaskListRecentTypeWork.visibility = View.VISIBLE
+                        } else {
+                            ivFragmentTaskListTypeRing.setImageResource(R.drawable.a_shape_relax_ring)
+                            tvFragmentTaskListRecentTypeWork.visibility = View.GONE
+                            tvFragmentTaskListRecentTypeRelax.visibility = View.VISIBLE
+                        }
+
+                        val remainingTime =
+                            (if (stopType == ActionType.WORK) workTimeInMinutes else relaxTimeInMinutes) * 60L - passedTimeInSeconds
+                        tvFragmentTaskListRecentTimer.text = remainingTime.toTimeText()
+
+                        cvFragmentTaskListRecentTask.setOnClickListener {
+                            Navigation.createNavigateOnClickListener(
+                                TaskListFragmentDirections.actionTaskListFragmentToTimerFragment(
+                                    currentTask = this
+                                )
+                            ).onClick(it)
+                        }
+                    }
+
+                    cvFragmentTaskListRecentTask.visibility = View.VISIBLE
+                }
+            } else {
+                binding.cvFragmentTaskListRecentTask.visibility = View.GONE
+            }
             taskListAdapter.submitData(it.taskList)
         }
     }

@@ -28,16 +28,17 @@
         android:layout_marginTop="40dp"
         android:text="Таймеры"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintTop_toBottomOf="@+id/cv_fragment_task_list_recent_task" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/cv_fragment_task_list_recent_task"
         android:layout_width="0dp"
         android:layout_height="110dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="@color/background_support"
+        android:visibility="gone"
         app:cardCornerRadius="@dimen/card_corner_radius"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +62,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/iv_fragment_task_list_type_ring"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginTop="16dp"
@@ -79,10 +80,10 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="UI Design"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_fragment_task_list_type_ring"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView2"
-                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+                app:layout_constraintStart_toEndOf="@+id/iv_fragment_task_list_type_ring"
+                app:layout_constraintTop_toTopOf="@+id/iv_fragment_task_list_type_ring" />
 
             <ImageView
                 android:id="@+id/iv_fragment_task_list_recent_play"
@@ -96,12 +97,24 @@
                 app:tint="@color/white" />
 
             <TextView
-                android:id="@+id/tv_fragment_task_list_recent_type"
+                android:id="@+id/tv_fragment_task_list_recent_type_work"
                 style="@style/WorkTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="Work"
+                android:text="Работа"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_fragment_task_list_recent_play"
+                app:layout_constraintEnd_toStartOf="@+id/iv_fragment_task_list_recent_play"
+                app:layout_constraintTop_toTopOf="@+id/iv_fragment_task_list_recent_play" />
+
+            <TextView
+                android:id="@+id/tv_fragment_task_list_recent_type_relax"
+                style="@style/RelaxTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="Отдых"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_fragment_task_list_recent_play"
                 app:layout_constraintEnd_toStartOf="@+id/iv_fragment_task_list_recent_play"
                 app:layout_constraintTop_toTopOf="@+id/iv_fragment_task_list_recent_play" />

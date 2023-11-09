@@ -6,7 +6,7 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.rxs.pomodorotracker.R
 import com.rxs.pomodorotracker.common.concatPomodoroText
-import com.rxs.pomodorotracker.common.fromMinutesToText
+import com.rxs.pomodorotracker.common.toStringWithZeros
 import com.rxs.pomodorotracker.data.model.Task
 import com.rxs.pomodorotracker.databinding.ItemTaskBinding
 import javax.inject.Inject
@@ -22,13 +22,13 @@ class TaskListAdapter @Inject constructor() :
 
         fun setData(task: Task) = binding.apply {
             tvItemTaskTitle.text = task.name
-            tvItemTaskWorkTime.text = task.workTimeInMinutes.fromMinutesToText()
-            tvItemTaskRelaxTime.text = task.relaxTimeInMinutes.fromMinutesToText()
+            tvItemTaskWorkTime.text = task.workTimeInMinutes.toStringWithZeros()
+            tvItemTaskRelaxTime.text = task.relaxTimeInMinutes.toStringWithZeros()
             tvItemTaskCompletedText.text =
                 concatPomodoroText(complete = task.tomatoesComplete, goal = task.tomatoesGoal)
             clItemTask.setOnClickListener {
                 Navigation.createNavigateOnClickListener(
-                    R.id.action_taskListFragment_to_timerFragment
+                    TaskListFragmentDirections.actionTaskListFragmentToTimerFragment(currentTask = task)
                 ).onClick(it)
             }
         }
